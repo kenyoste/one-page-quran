@@ -1,0 +1,25 @@
+{
+  "name": "quran-turkce-meal-pdf",
+  "version": "1.0.0",
+  "description": "Kuran-ı Kerim Türkçe Meal - Tek PDF (quran-json CDN verisi)",
+  "main": "generate-pdf.js",
+  "scripts": {
+    "generate": "node generate-pdf.js",
+    "start": "node generate-pdf.js"
+  },
+  "keywords": [
+    "quran",
+    "kur-an",
+    "meal",
+    "turkce",
+    "pdf"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/playwrite-de-grund": "^5.2.7",
+    "node-fetch": "^2.7.0",
+    "pdfkit": "^0.15.0",
+    "puppeteer": "^24.37.3",
+    "sharp": "^0.34.5"
+  }
+}
