@@ -1,22 +1,34 @@
-````md
+
 # Qur’an Turkish Translation PDF
 
-This project compiles the complete Turkish Qur’an translation (meal) into a single PDF file.
+This project generates a single PDF file containing the complete Turkish translation (meal) of the Qur’an.
 
-Upcoming update: support for additional languages will be added, and Qur’an translations in different languages will be available.
+The translation data is fetched from a CDN and compiled into a one-page PDF format.
 
-Data source: quran-json (Diyanet Presidency translation).
+> Planned update: multi-language support will be added, and Qur’an translations in different languages will be available.
+
+---
+
+## Features
+
+- Single PDF output (114 surahs, 6,236 verses)
+- Uses official Diyanet Presidency Turkish translation
+- CDN-based data source
+- Node.js-based PDF generation
+- UTF-8 / Turkish character support
 
 ---
 
 ## Requirements
 
-- Node.js (recommended: LTS)
+- Node.js (LTS recommended)
 - npm
 
 ---
 
 ## Installation
+
+Clone the repository and install dependencies:
 
 ```bash
 npm install
@@ -25,6 +37,8 @@ npm install
 ---
 
 ## Generate PDF
+
+Run the following command:
 
 ```bash
 npm run generate
@@ -36,45 +50,50 @@ or directly:
 node generate-pdf.js
 ```
 
-This process will:
+This will:
 
 * Download the Turkish translation data from the CDN
-* Load the Roboto font (for proper Turkish character support)
+* Load the Roboto font (for proper Turkish character rendering)
 * Generate the PDF file
 
-Output file:
+Output:
 
 ```text
 Quran-Turkish-Translation.pdf
 ```
-
-(114 surahs, 6,236 verses)
 
 ---
 
 ## Project Structure
 
 ```text
-/
-├─ generate-pdf.js        # PDF generation script
-├─ index.html             # PDF download page
-├─ Quran-Turkish-Translation.pdf
-└─ package.json
+.
+├── generate-pdf.js        # PDF generation script
+├── index.html             # PDF download page
+├── Quran-Turkish-Translation.pdf
+├── package.json
+└── README.md
 ```
 
 ---
 
 ## Data Source
 
-* API: [https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_tr.json](https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_tr.json)
-* Translation: Diyanet Presidency
-* License: CC-BY-SA 4.0 (Risan Bagja Pradana)
+* **API**
+  [https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_tr.json](https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran_tr.json)
+
+* **Translation**
+  Diyanet Presidency of Religious Affairs (Turkey)
+
+* **License**
+  CC-BY-SA 4.0
+  Risan Bagja Pradana
 
 ---
 
-## XAMPP Usage
+## Usage with XAMPP
 
-If the project is placed under:
+If the project directory is placed under:
 
 ```text
 htdocs/onepage
@@ -86,15 +105,14 @@ You can access it via:
 http://localhost/onepage/
 ```
 
-From there, the index page and PDF download link will be available.
+The index page and PDF download link will be available there.
 
 ---
 
 ## Roadmap
 
 * Multi-language support
-* Different Qur’an translations (meals)
+* Multiple Qur’an translations (meals)
 * Language selection via UI
 
-```
-```
+
